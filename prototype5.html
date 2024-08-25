@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css1.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="prototype2.html"><b>Submit</b></a>
+        <a href="prototype4.html"><b>Seacrh</b></a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Account</b></button>
+            <div class="dropdown-content">
+                <button onclick="window.location.href='prototype1.html'">Logout</button>
+            </div>
+        </div>
+    </div>
+    <header class="heading">
+        <span class="left">Creating Route</span>
+        <span class="right">Welcome Mr. Amir</span>
+    </header>
+
+    <form style="text-align: left;">
+        <div style="border: 2px solid #313131; padding: 10px; margin-top: 50px;">
+            <label><b>Doc ID:</b></label>
+            <label>24767</label>
+            <br><br>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="left" style="text-align: center">
+                    Choose Department:
+                    <select id="mySelect">
+                        <option value="Academics">Academics</option>
+                        <option value="HOD">HOD</option>
+                        <option value="Director">Director</option>
+                        <option value="Rector">Rector</option>
+                        <option value="Applicant">Applicant</option>
+                    </select>
+                    <br><br>
+                    <button type="button" onclick="createList()">Add to Route</button>
+                </div>
+                <div class="right" style="text-align: center">
+                    <label style="font-size: large;"><b>Final Route</b></label>
+                    <ul id="myList"></ul>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <br>
+            <button type="button" onclick="window.location.href='prototype2.html';">Done</button>
+
+            
+              
+            <script>
+                function createList() {
+                    // Get the selected value from the dropdown menu
+                    var selectedValue = document.getElementById("mySelect").value;
+                
+                    // Create a new list item with the selected value
+                    var newItem = document.createElement("li");
+                    var textNode = document.createTextNode(selectedValue);
+                    newItem.appendChild(textNode);
+                
+                    // Add the new item to the list
+                    var list = document.getElementById("myList");
+                    list.appendChild(newItem);
+                }
+            </script>
+        </div>
+    </form>
+</body>
+
+</html>

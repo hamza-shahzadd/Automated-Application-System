@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css1.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="prototype2.html"><b>Submit</b></a>
+        <a href="prototype4.html"><b>Seacrh</b></a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Account</b></button>
+            <div class="dropdown-content">
+                <button onclick="window.location.href='prototype1.html'">Logout</button>
+            </div>
+        </div>
+    </div>
+    <header class="heading">
+        <span class="left">Search Application</span>
+        <span class="right">Welcome Mr. Amir</span>
+    </header>
+
+    <form style="text-align: left;">
+        <div style="border: 2px solid #313131; padding: 10px; margin-top: 50px;">
+            <table>
+                <tr>
+                    <td>
+                        <label style="width: inherit;">Search:</label>
+                        <input type="text" id="view_req_detail" name="id">
+                    </td>
+                    <td>
+                        <label style="width: inherit;">Filter:</label>
+                        <select id="drop_down_req_menu" name="my-dropdown" style="height: 30px; font-size: 12px;">
+                            <option value="id" style="font-size: 12px;">ID</option>
+                            <option value="type" style="font-size: 12px;">type</option>
+                            <option value="status" style="font-size: 12px;">Status</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="left">
+                    <button type="button" onclick="window.location.href='prototype2.html';">Back</button>
+                </div>
+                <div class="right">
+                    <button type="button" onclick="searchRecord()">Search</button>
+                </div>
+            </div>
+            <br>
+            <div style="overflow: auto; max-height: 600px;">
+                <table id="grdUser">
+                   <thead> 
+                    <tr>
+                        <th style="display: hidden;"></th>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Doc ID
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    
+                </table>
+            </div>
+            
+            <script>
+                const rows = document.querySelectorAll('#grdUser tbody');
+                 // Add a click event listener to each row
+                 rows.forEach(row => {
+                     row.addEventListener('click', () => {
+                     // Get the data from the row (in this case, the name and age)
+                         window.location.href='prototype6.html';
+                     });
+                 });
+
+                window.onload=function(){
+                    generateTable(records);
+                }
+
+                
+            </script>
+<script src="new.js"></script>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css1.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="prototype2.html"><b>Submit</b></a>
+        <a href="prototype4.html"><b>Seacrh</b></a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Account</b></button>
+            <div class="dropdown-content">
+                <button onclick="window.location.href='prototype1.html'">Logout</button>
+            </div>
+        </div>
+    </div>
+    <header class="heading">
+        <span class="left">Search Application</span>
+        <span class="right">Welcome Mr. Amir</span>
+    </header>
+
+    <form style="text-align: left;">
+        <div style="border: 2px solid #313131; padding: 10px; margin-top: 50px;">
+            <table>
+                <tr>
+                    <td>
+                        <label style="width: inherit;">ID:</label>
+                        <input type="text" id="text-input2" name="id">
+                    </td>
+                    <td>
+                        <label style="width: inherit;">Title:</label>
+                        <select id="my-dropdown" name="my-dropdown" style="height: 30px; font-size: 12px;">
+                            <option value="Fee-Queries" style="font-size: 12px;">Fee Queries</option>
+                            <option value="Grade-Change" style="font-size: 12px;">Grade Change</option>
+                            <option value="Retake-Exam" style="font-size: 12px;">Retake Exam</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label style="width: inherit;">Date:</label>
+                        <input type="date" id="date" name="date">
+                    </td>
+                    <td>
+                        <label style="width: inherit;">Status:</label>
+                        <input type="text" id="text-input2" name="name">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="left">
+                    <button type="button" onclick="window.location.href='prototype2.html';">Back</button>
+                </div>
+                <div class="right">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+            <br>
+            <div style="overflow: auto; max-height: 600px;">
+                <table id="resultTable">
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Doc ID
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0498
+                        </td>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0498
+                        </td>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0498
+                        </td>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0498
+                        </td>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0498
+                        </td>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0498
+                        </td>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0796
+                        </td>
+                        <td>
+                            3626
+                        </td>
+                        <td>
+                            Fee Query
+                        </td>
+                        <td>
+                            23/03/2023
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            20I-0940
+                        </td>
+                        <td>
+                            8453
+                        </td>
+                        <td>
+                            Grade Change
+                        </td>
+                        <td>
+                            11/01/2023
+                        </td>
+                        <td>
+                            Completed
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+            <script>
+                const rows = document.querySelectorAll('#resultTable tbody tr');
+
+                // Add a click event listener to each row
+                rows.forEach(row => {
+                    row.addEventListener('click', () => {
+                    // Get the data from the row (in this case, the name and age)
+                        window.location.href='prototype6.html';
+                    });
+                });
+            </script>
+
+        </div>
+    </form>
+</body>
+
+</html>

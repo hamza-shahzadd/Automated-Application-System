@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scan Document</title>
+    <link rel="stylesheet" type="text/css" href="scan.css">
+	
+	</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="prototype2.html"><b>Submit</b></a>
+    <a href="prototype4.html"><b>Seacrh</b></a>
+    <div class="dropdown">
+        <button class="dropbtn"><b>Account</b></button>
+        <div class="dropdown-content">
+            <button onclick="window.location.href='prototype1.html'">Logout</button>
+        </div>
+    </div>
+</div>
+	<header>
+        <header class="heading">
+            <span class="left">Upload Document</span>
+            <span class="right">Welcome Mr. Amir</span>
+        </header>
+		<h1>Upload Document</h1>
+	</header>
+	<main style="border: 2px solid #313131; padding: 10px; margin-top: 50px;margin-left: 20%;margin-right: 20%;">
+        
+		<div>
+            <br>
+            <label for="document-id">Document ID:</label><br>
+            <label>44598</label>
+            <br><br><br>
+
+			
+		</div>
+        <div class="controls">
+          <label for="upload-file">Upload your file here:</label>
+          <br>
+            <br>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button id="upload" >Upload File</button>
+            </div>
+        </div>
+        <br>
+        <div class = "two">
+            <label>Scanning the document:</label><br>
+            <progress id="scanning-progress" value="0" max="30"></progress>
+            <div id="progress-percentage"></div><br>
+            
+          </div>
+          <div class="preview-img" style="text-align: center;">
+			<img src="download.png" alt="preview-img">
+		  </div>
+          <footer style="text-align: center;">
+          <br>
+        <button type="submit" onclick="window.location.href='prototype5.html';">Submit</button>
+        <br>
+        </footer>
+
+	</main>
+
+	<script>
+
+const progress = document.getElementById("scanning-progress");
+const percentageDisplay = document.getElementById("progress-percentage");
+const updateProgress = () => {
+  const percentage = Math.round((progress.value / progress.max) * 100);
+  percentageDisplay.textContent = `${percentage}%`;
+};
+
+
+
+
+
+
+		////////////////////////////////////////
+		const imageButton = document.querySelector("#upload");
+imageButton.addEventListener("click", function(){
+
+    const fileReader = document.querySelector(".file-input");
+    fileReader.click();
+    fileReader.addEventListener("change", function(){
+        var file = fileReader.files[0];
+        if (file == null){
+            return;
+        }else{
+            var loadedImage = document.querySelector(".preview-img img");
+            loadedImage.src = URL.createObjectURL(file);
+            progress.value = 0;
+  const interval = setInterval(() => {
+    if (progress.value >= progress.max) {
+      clearInterval(interval);
+      return;
+    }
+    progress.value += 1;
+    updateProgress();
+  }, 100);
+
+  // Simulating image upload success
+  setTimeout(() => {
+    progress.value = progress.max;
+    updateProgress();
+  }, 3000);
+        }
+
+    });
+   
+});
+	</script>
+</body>
+</html>
+
+

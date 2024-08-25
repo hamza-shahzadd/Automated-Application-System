@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="scan.css">
+    
+    <title>Document Tracking System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+      
+      #container {
+        margin-top: 2%;
+        width: 80%;
+        max-width: 800px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+      }
+     
+
+      
+      #progress-bar {
+        height: 20px;
+        background-color: #ddd;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      
+      #progress-bar .progress {
+        height: 100%;
+        background-color: #5880ef;
+        border-radius: 10px;
+        width: 0;
+        transition: width 0.1s ease-in-out;
+      }
+      
+      .location {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .location .tick {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        color: #fff;
+      }
+      
+      .location .tick.done {
+        background-color: #84a0ec;
+      }
+      
+      .location .label {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  
+  <body style="text-align: center;">
+    <div class="navbar">
+      <a href="prototype2.html"><b>Submit</b></a>
+      <a href="prototype4.html"><b>Seacrh</b></a>
+      <div class="dropdown">
+          <button class="dropbtn"><b>Account</b></button>
+          <div class="dropdown-content">
+              <button onclick="window.location.href='prototype1.html'">Logout</button>
+          </div>
+      </div>
+  </div>
+    <header class="heading">
+      <span class="left">Document Tracking</span>
+      <span class="right">Welcome Mr. Amir</span>
+  </header>
+    <div style="margin-left: 20%;">
+    <div id="container">
+      <div id="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="location">
+        <div class="tick done">&#10003;</div>
+        <div class="label">Academics   (4/28/2023)</div>
+      </div>
+      <div style="height: 30px; width: 2px;margin-left: 50px;margin-bottom: 18px; border-left: 1px solid rgb(158, 153, 153);"></div>
+
+
+      <div class="location">
+        <div class="tick done">&#10003;</div>
+        <div class="label">HOD  (5/1/2023)</div>
+      </div>
+      <div style="height: 30px; width: 2px;margin-left: 50px;margin-bottom: 18px; border-left: 1px solid rgb(158, 153, 153);"></div>
+      <div class="location">
+        <div class="tick done">&#10003;</div>
+        <div class="label">Director (5/2/2023)</div>
+      </div>
+      <div style="height: 30px; width: 2px;margin-left: 50px;margin-bottom: 18px; border-left: 1px solid rgb(158, 153, 153);"></div>
+      <div class="location">
+        <div class="tick done">&#10003;</div>
+        <div class="label">Rector         (5/6/2023)</div>
+      </div>
+      <div style="height: 30px; width: 2px;margin-left: 50px;margin-bottom: 18px; border-left: 1px solid rgb(158, 153, 153);"></div>
+      <div class="location">
+        <div class="tick">&#9675;</div>
+        <div class="label">Academics</div>
+      </div>
+      <div style="height: 30px; width: 2px;margin-left: 50px;margin-bottom: 18px; border-left: 1px solid rgb(158, 153, 153);"></div>
+      <div class="location">
+        <div class="tick">&#9675;</div>
+        <div class="label">Applicant</div>
+        
+        
+        
+
+      </div>
+    </div>
+</div>
+<div style="text-align: right; margin-bottom: 10%;">
+  <button type="button" style="float: right;" onclick="window.location.href='prototype4.html';">Back</button>
+</div>
+    <script>
+      // Animate progress bar
+      const progressBar = document.querySelector('.progress');
+      const animateProgressBar = () => {
+        let width = 0;
+        let interval = setInterval(() => {
+          if (width >= 100) {
+            clearInterval(interval);
+            return;
+          }
+          width++;
+          progressBar.style.width = `${width}%`;
+        }, 50);
+      };
+      animateProgressBar();
+      
+      // Update tick marks as document progresses
+      const locations = document.querySelectorAll('.location');
+      locations.forEach((location, index) => {
+        if (index === 0) {
+location.querySelector('.tick').classList.add('done');
+} else {
+setTimeout(() => {
+location.querySelector('.tick').classList.add('done');
+}, 2000 * index);
+}
+});
+</script>
+
+  </body>
+</html>
+
